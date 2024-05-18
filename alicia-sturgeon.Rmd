@@ -15,36 +15,95 @@ suppressWarnings(suppressMessages(library(here)))
 suppressWarnings(suppressMessages(library(cder)))
 suppressWarnings(suppressMessages(library(deltafish)))
 
+output <- here("plots")
+
 ```
 
 ## Import Data
 
 ```{r import, echo = FALSE}
 #Read salvage data from 2006-2010
-df_salvage1 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=2b69c9a5839388f4ffa0389fca291db9")
+df_1 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=2b69c9a5839388f4ffa0389fca291db9")
 
 # Read salvage data from 2011-2015
-df_salvage2 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=0854feedae21e01de8a066ac53b4d7a7")
+df_2 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=0854feedae21e01de8a066ac53b4d7a7")
 
 # Read salvage data from 2016-2021
-df_salvage3 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=218aab8614d887c71cfc3d35402e6c16")
+df_3 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=218aab8614d887c71cfc3d35402e6c16")
 
 # Read salvage data from 2022
-df_salvage4 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=5f4a97b2a14665c99ea99a42451e47c3")
+df_4 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=5f4a97b2a14665c99ea99a42451e47c3")
 
 # Merge data frames
 df_salvage <- bind_rows(df_salvage1,df_salvage2,df_salvage3,df_salvage4)
 
-
+rm(df_1)
+rm(df_2)
+rm(df_3)
+rm(df_4)
 
 ```
 
-## Including Plots
+## Clean up data
 
-You can also embed plots, for example:
+```{r clean, echo=FALSE}
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+df_WS <- df_salvage %>% 
+  select(SampleDate,Count:CommonName,BuildingCode,ForkLength) %>% 
+  filter(CommonName == "White Sturgeon")
+
+df_WS <- df_WS %>%
+  mutate(Year = year(df_WS$SampleDate)) %>%
+  mutate(Month = month(df_WS$SampleDate, label = TRUE))
+
+# Rename facilities
+# Add more detailed description of each station
+df_WS <- df_WS %>% 
+  mutate(BuildingCode = case_when(BuildingCode == "F" ~ "Tracy FF",
+                                 BuildingCode == "NS" ~ "Skinner FF (New)",
+                                 BuildingCode == "OS" ~ "Skinner FF (Old)"))
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Plot up salvage data
+
+```{r plot salvage, echo=FALSE}
+
+# Use the black-and-white theme
+theme_set(theme_bw())
+
+# Set the theme
+theme_update(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", colour = NA),
+    panel.background = element_rect(fill = "white", colour = NA),
+    panel.border = element_rect(fill = NA, colour = "black"),
+    strip.background = element_rect(fill = "gray", colour = "black"),
+    legend.position = "bottom",
+    legend.key = element_rect(fill = "white", colour = NA)
+    )
+
+p1 <- ggplot(df_WS, aes(x = Month,
+                        y = Count,
+                        fill = BuildingCode)) +
+  geom_col(width = 0.7) +
+  labs(x = NULL,
+       y = "Total Fish Caught",
+       title = "White Sturgeon Caught in Salvage 2009 - 2022")
+
+p1 + 
+  facet_wrap(Year ~ ., ncol = 3) +
+  scale_fill_brewer(palette = "Set1")
+
+ggsave(path = output,
+       filename = "salvage-WhiteSturgeon-2009-2022.png",
+       device = "png",
+       scale=1.0,
+       units="in",
+       height=5,
+       width=9,
+       dpi="print")
+
+```
+
