@@ -1,0 +1,50 @@
+---
+title: "Summarizing Sturgeon for Alicia"
+author: "Ted Flynn & Rosie Hartman"
+date: "2024-05-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+suppressWarnings(suppressMessages(library(tidyverse)))
+suppressWarnings(suppressMessages(library(lubridate)))
+suppressWarnings(suppressMessages(library(janitor)))
+suppressWarnings(suppressMessages(library(here)))
+suppressWarnings(suppressMessages(library(cder)))
+suppressWarnings(suppressMessages(library(deltafish)))
+
+```
+
+## Import Data
+
+```{r import, echo = FALSE}
+#Read salvage data from 2006-2010
+df_salvage1 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=2b69c9a5839388f4ffa0389fca291db9")
+
+# Read salvage data from 2011-2015
+df_salvage2 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=0854feedae21e01de8a066ac53b4d7a7")
+
+# Read salvage data from 2016-2021
+df_salvage3 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=218aab8614d887c71cfc3d35402e6c16")
+
+# Read salvage data from 2022
+df_salvage4 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=5f4a97b2a14665c99ea99a42451e47c3")
+
+# Merge data frames
+df_salvage <- bind_rows(df_salvage1,df_salvage2,df_salvage3,df_salvage4)
+
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
