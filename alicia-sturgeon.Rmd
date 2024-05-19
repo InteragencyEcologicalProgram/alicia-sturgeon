@@ -42,7 +42,19 @@ rm(df_2)
 rm(df_3)
 rm(df_4)
 
-```
+# Use deltafish to import non-salvage data
+create_fish_db()
+
+# Filter out everything but white sturgeon
+fish_WS <- fish %>% 
+    filter(Taxa == "Acipenser transmontanus")
+
+# Pull out non-salvage fish data
+df_nonsalvage <- left_join(surv, fish_WS) 
+
+unique(df_nonsalvage$Source) # 9 different surveys
+
+```  
 
 ## Clean up data
 
@@ -52,16 +64,34 @@ df_WS <- df_salvage %>%
   select(SampleDate,Count:CommonName,BuildingCode,ForkLength) %>% 
   filter(CommonName == "White Sturgeon")
 
-df_WS <- df_WS %>%
-  mutate(Year = year(df_WS$SampleDate)) %>%
-  mutate(Month = month(df_WS$SampleDate, label = TRUE))
-
-# Rename facilities
+# Rename salvage facilities
 # Add more detailed description of each station
 df_WS <- df_WS %>% 
   mutate(BuildingCode = case_when(BuildingCode == "F" ~ "Tracy FF",
                                  BuildingCode == "NS" ~ "Skinner FF (New)",
                                  BuildingCode == "OS" ~ "Skinner FF (Old)"))
+
+# Write only salvage data
+write.csv(df_WS, file = "salvage-white-sturgeon-2006-2022.csv")
+
+# Clean up non-salvage data 
+df_WS_ns <- df_nonsalvage %>% 
+  select(Date,Station,Source,Taxa,Length,Count) %>% 
+  filter(Count != 0)
+  
+
+df_WS_ns <- df_WS_ns %>%
+  mutate(Year = year(df_WS_ns$Date)) %>%
+  mutate(Month = month(df_WS_ns$Date, label = TRUE))
+
+write.csv(df_WS_ns, file = "nonsalvage-white-sturgeon.csv")
+
+df_WS_ns <- df_WS_ns %>%
+  filter(Year >= 2009)
+
+df_WS <- df_WS %>%
+  mutate(Year = year(df_WS$SampleDate)) %>%
+  mutate(Month = month(df_WS$SampleDate, label = TRUE))
 
 ```
 
@@ -84,6 +114,7 @@ theme_update(
     legend.key = element_rect(fill = "white", colour = NA)
     )
 
+# Plot salvage data
 p1 <- ggplot(df_WS, aes(x = Month,
                         y = Count,
                         fill = BuildingCode)) +
@@ -98,6 +129,28 @@ p1 +
 
 ggsave(path = output,
        filename = "salvage-WhiteSturgeon-2009-2022.png",
+       device = "png",
+       scale=1.0,
+       units="in",
+       height=5,
+       width=9,
+       dpi="print")
+
+# Plot non-salvage data
+p2 <- ggplot(df_WS_ns, aes(x = Month,
+                           y = Count,
+                           fill = Source)) +
+  geom_col(width = 0.7) +
+  labs(x = NULL,
+       y = "Total Fish Caught",
+       title = "White Sturgeon Caught in Other Surveys")
+
+p2 + 
+  facet_wrap(Year ~ ., ncol = 3, scales = "free_y") +
+  scale_fill_brewer(palette = "Set1")
+
+ggsave(path = output,
+       filename = "nonsalvage-WhiteSturgeon-2006-2021.png",
        device = "png",
        scale=1.0,
        units="in",
