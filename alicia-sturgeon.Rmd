@@ -15,87 +15,126 @@ suppressWarnings(suppressMessages(library(here)))
 suppressWarnings(suppressMessages(library(cder)))
 suppressWarnings(suppressMessages(library(deltafish)))
 
-output <- here("plots")
+# Set output directory
+output <- here("output")
 
 ```
 
-## Import Data
+## Import Salvage Data from EDI
 
-```{r import, echo = FALSE}
+```{r import EDI, echo = FALSE}
 #Read salvage data from 2006-2010
-df_1 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=2b69c9a5839388f4ffa0389fca291db9")
+df_sv1 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=2b69c9a5839388f4ffa0389fca291db9", show_col_types = FALSE)
 
 # Read salvage data from 2011-2015
-df_2 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=0854feedae21e01de8a066ac53b4d7a7")
+df_sv2 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=0854feedae21e01de8a066ac53b4d7a7", show_col_types = FALSE)
 
 # Read salvage data from 2016-2021
-df_3 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=218aab8614d887c71cfc3d35402e6c16")
+df_sv3 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=218aab8614d887c71cfc3d35402e6c16", show_col_types = FALSE)
 
 # Read salvage data from 2022
-df_4 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=5f4a97b2a14665c99ea99a42451e47c3")
+df_sv4 <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.1290.6&entityid=5f4a97b2a14665c99ea99a42451e47c3", show_col_types = FALSE)
 
-# Merge data frames
-df_salvage <- bind_rows(df_salvage1,df_salvage2,df_salvage3,df_salvage4)
+# Merge imported data frames
+df_SV <- bind_rows(df_sv1,df_sv2,df_sv3,df_sv4)
 
-rm(df_1)
-rm(df_2)
-rm(df_3)
-rm(df_4)
+# Remove imported dfs
+rm(df_sv1)
+rm(df_sv2)
+rm(df_sv3)
+rm(df_sv4)
 
-# Use deltafish to import non-salvage data
-create_fish_db()
-
-# Filter out everything but white sturgeon
-fish_WS <- fish %>% 
-    filter(Taxa == "Acipenser transmontanus")
-
-# Pull out non-salvage fish data
-df_nonsalvage <- left_join(surv, fish_WS) 
-
-unique(df_nonsalvage$Source) # 9 different surveys
-
-```  
-
-## Clean up data
-
-```{r clean, echo=FALSE}
-
-df_WS <- df_salvage %>% 
+# Select needed columns and select only sturgeon
+df_SV <- df_SV %>% 
   select(SampleDate,Count:CommonName,BuildingCode,ForkLength) %>% 
   filter(CommonName == "White Sturgeon")
 
-# Rename salvage facilities
+```  
+
+## Import Non-Salvage Data Using Deltafish Package
+
+```{r deltafish import, echo=FALSE, include=FALSE}
+
+# Build deltafish database (only use first time)
+create_fish_db()
+
+# Open two deltafish data files
+surv <- open_survey()
+fish <- open_fish()
+
+# Filter out everything but white sturgeon from deltafish
+fish_WS <- fish %>% filter(Taxa == "Acipenser transmontanus")
+
+# Pull out non-salvage fish data from deltafish package
+df_NSV <- left_join(surv, fish_WS) %>% collect()
+
+# Remove list
+rm(fish_WS)
+
+# Remove unneeded columns and zeros
+df_NSV <- df_NSV %>% 
+  select(Station,Date,Source:Count,Taxa) %>% 
+  filter(Count != 0) %>% 
+  mutate(CommonName = case_when(Taxa == "Acipenser transmontanus" ~ "White Sturgeon",
+                                TRUE ~ NA))
+
+# Check for NAs from mutate
+sum(is.na(df_NSV$CommonName)) # none
+
+# Remove extraneous Taxa column
+df_NSV <- df_NSV %>% select(!Taxa)
+
+```
+
+## Clean Up Sturgeon Data
+
+```{r clean, echo=FALSE}
+
+# Rename salvage df headers
 # Add more detailed description of each station
-df_WS <- df_WS %>% 
-  mutate(BuildingCode = case_when(BuildingCode == "F" ~ "Tracy FF",
-                                 BuildingCode == "NS" ~ "Skinner FF (New)",
-                                 BuildingCode == "OS" ~ "Skinner FF (Old)"))
 
-# Write only salvage data
-write.csv(df_WS, file = "salvage-white-sturgeon-2006-2022.csv")
+df_SV <- df_SV %>% 
+  rename("Station" = "BuildingCode") %>% 
+  mutate(Source = "Salvage", .after = Station)
 
-# Clean up non-salvage data 
-df_WS_ns <- df_nonsalvage %>% 
-  select(Date,Station,Source,Taxa,Length,Count) %>% 
-  filter(Count != 0)
+df_SV <- df_SV %>%
+  mutate(Station = case_when(Station == "F" ~ "Tracy FF",
+                                  Station == "NS" ~ "Skinner FF (New)",
+                                  Station == "OS" ~ "Skinner FF (Old)"))
+
+# Rename length b/c it's not a major component of the analysis
+df_SV <- df_SV %>%
+  rename("Length" = "ForkLength")
+
+# Rename columns in non-salvage df to match
+df_NSV <- df_NSV %>% 
+  rename("SampleDate" = "Date")
   
+# Merge salvage and non-salvage data
+df_WS <- bind_rows(df_SV,df_NSV)
 
-df_WS_ns <- df_WS_ns %>%
-  mutate(Year = year(df_WS_ns$Date)) %>%
-  mutate(Month = month(df_WS_ns$Date, label = TRUE))
-
-write.csv(df_WS_ns, file = "nonsalvage-white-sturgeon.csv")
-
-df_WS_ns <- df_WS_ns %>%
-  filter(Year >= 2009)
-
+# Add year and month data for plotting
 df_WS <- df_WS %>%
   mutate(Year = year(df_WS$SampleDate)) %>%
   mutate(Month = month(df_WS$SampleDate, label = TRUE))
 
+# Remove data prior to 2009 (Alicia request)
+df_WS <- df_WS %>% filter(Year >= 2009)
+
+# Reorganize columns logically
+df_WS <- df_WS %>% 
+  relocate(Year, .after = SampleDate) %>% 
+  relocate(Month, .after = Year) %>% 
+  relocate(Source, .after = Month) %>% 
+  relocate(Station, .after = Source) %>% 
+  relocate(Count, .after = Length)
+
+# Write out CSV of data for Alicia
+write_csv(df_WS, file = "white-sturgeon-since-2009.csv")
+
 ```
 
-## Plot up salvage data
+## Plot Up Data
 
 ```{r plot salvage, echo=FALSE}
 
@@ -114,43 +153,21 @@ theme_update(
     legend.key = element_rect(fill = "white", colour = NA)
     )
 
-# Plot salvage data
+# Plot all data
 p1 <- ggplot(df_WS, aes(x = Month,
                         y = Count,
-                        fill = BuildingCode)) +
+                        fill = Source)) +
   geom_col(width = 0.7) +
   labs(x = NULL,
        y = "Total Fish Caught",
-       title = "White Sturgeon Caught in Salvage 2009 - 2022")
+       title = "White Sturgeon Caught Since 2009")
 
 p1 + 
-  facet_wrap(Year ~ ., ncol = 3) +
-  scale_fill_brewer(palette = "Set1")
-
-ggsave(path = output,
-       filename = "salvage-WhiteSturgeon-2009-2022.png",
-       device = "png",
-       scale=1.0,
-       units="in",
-       height=5,
-       width=9,
-       dpi="print")
-
-# Plot non-salvage data
-p2 <- ggplot(df_WS_ns, aes(x = Month,
-                           y = Count,
-                           fill = Source)) +
-  geom_col(width = 0.7) +
-  labs(x = NULL,
-       y = "Total Fish Caught",
-       title = "White Sturgeon Caught in Other Surveys")
-
-p2 + 
   facet_wrap(Year ~ ., ncol = 3, scales = "free_y") +
   scale_fill_brewer(palette = "Set1")
 
 ggsave(path = output,
-       filename = "nonsalvage-WhiteSturgeon-2006-2021.png",
+       filename = "WhiteSturgeon-since-2009.png",
        device = "png",
        scale=1.0,
        units="in",

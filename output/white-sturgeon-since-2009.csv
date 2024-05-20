@@ -1,0 +1,365 @@
+SampleDate,Year,Month,Source,Station,CommonName,Length,Count
+2009-11-30,2009,Nov,Salvage,Skinner FF (New),White Sturgeon,259,1
+2010-03-14,2010,Mar,Salvage,Skinner FF (Old),White Sturgeon,310,1
+2011-05-10,2011,May,Salvage,Tracy FF,White Sturgeon,59,1
+2011-05-11,2011,May,Salvage,Tracy FF,White Sturgeon,50,1
+2011-06-08,2011,Jun,Salvage,Skinner FF (New),White Sturgeon,365,1
+2011-06-10,2011,Jun,Salvage,Tracy FF,White Sturgeon,60,2
+2011-06-10,2011,Jun,Salvage,Tracy FF,White Sturgeon,107,2
+2011-06-10,2011,Jun,Salvage,Tracy FF,White Sturgeon,105,1
+2011-06-26,2011,Jun,Salvage,Tracy FF,White Sturgeon,140,1
+2011-06-26,2011,Jun,Salvage,Tracy FF,White Sturgeon,170,1
+2011-06-30,2011,Jun,Salvage,Skinner FF (New),White Sturgeon,185,1
+2011-07-02,2011,Jul,Salvage,Tracy FF,White Sturgeon,162,1
+2011-07-03,2011,Jul,Salvage,Tracy FF,White Sturgeon,190,1
+2011-07-16,2011,Jul,Salvage,Tracy FF,White Sturgeon,180,1
+2011-07-28,2011,Jul,Salvage,Tracy FF,White Sturgeon,194,1
+2011-08-01,2011,Aug,Salvage,Tracy FF,White Sturgeon,231,1
+2011-08-02,2011,Aug,Salvage,Tracy FF,White Sturgeon,235,1
+2011-08-02,2011,Aug,Salvage,Tracy FF,White Sturgeon,263,1
+2011-08-05,2011,Aug,Salvage,Tracy FF,White Sturgeon,290,1
+2011-08-08,2011,Aug,Salvage,Tracy FF,White Sturgeon,263,1
+2011-08-09,2011,Aug,Salvage,Tracy FF,White Sturgeon,227,1
+2011-08-15,2011,Aug,Salvage,Tracy FF,White Sturgeon,292,1
+2011-08-19,2011,Aug,Salvage,Tracy FF,White Sturgeon,256,1
+2011-08-26,2011,Aug,Salvage,Tracy FF,White Sturgeon,230,2
+2011-08-26,2011,Aug,Salvage,Tracy FF,White Sturgeon,340,2
+2011-08-28,2011,Aug,Salvage,Tracy FF,White Sturgeon,305,1
+2011-09-08,2011,Sep,Salvage,Tracy FF,White Sturgeon,310,1
+2011-09-15,2011,Sep,Salvage,Tracy FF,White Sturgeon,285,1
+2011-09-19,2011,Sep,Salvage,Tracy FF,White Sturgeon,335,1
+2012-06-13,2012,Jun,Salvage,Skinner FF (Old),White Sturgeon,358,1
+2012-11-19,2012,Nov,Salvage,Tracy FF,White Sturgeon,317,1
+2013-01-01,2013,Jan,Salvage,Skinner FF (New),White Sturgeon,427,1
+2013-01-12,2013,Jan,Salvage,Skinner FF (New),White Sturgeon,378,1
+2013-05-02,2013,May,Salvage,Skinner FF (New),White Sturgeon,309,1
+2013-05-02,2013,May,Salvage,Skinner FF (New),White Sturgeon,352,1
+2016-10-01,2016,Oct,Salvage,Tracy FF,White Sturgeon,360,1
+2016-12-03,2016,Dec,Salvage,Skinner FF (New),White Sturgeon,370,1
+2016-12-13,2016,Dec,Salvage,Skinner FF (New),White Sturgeon,442,1
+2017-01-18,2017,Jan,Salvage,Skinner FF (New),White Sturgeon,360,1
+2017-02-02,2017,Feb,Salvage,Skinner FF (New),White Sturgeon,410,1
+2017-05-18,2017,May,Salvage,Skinner FF (Old),White Sturgeon,80,1
+2017-06-03,2017,Jun,Salvage,Tracy FF,White Sturgeon,140,1
+2017-06-04,2017,Jun,Salvage,Skinner FF (Old),White Sturgeon,144,1
+2017-06-19,2017,Jun,Salvage,Tracy FF,White Sturgeon,82,1
+2017-07-17,2017,Jul,Salvage,Tracy FF,White Sturgeon,277,2
+2017-07-17,2017,Jul,Salvage,Tracy FF,White Sturgeon,209,2
+2017-07-24,2017,Jul,Salvage,Tracy FF,White Sturgeon,270,1
+2017-08-02,2017,Aug,Salvage,Skinner FF (New),White Sturgeon,258,1
+2017-08-03,2017,Aug,Salvage,Tracy FF,White Sturgeon,326,1
+2017-08-13,2017,Aug,Salvage,Tracy FF,White Sturgeon,315,1
+2017-08-15,2017,Aug,Salvage,Tracy FF,White Sturgeon,290,1
+2018-04-09,2018,Apr,Salvage,Skinner FF (Old),White Sturgeon,349,1
+2018-05-15,2018,May,Salvage,Tracy FF,White Sturgeon,441,1
+2018-11-14,2018,Nov,Salvage,Tracy FF,White Sturgeon,235,1
+2019-01-16,2019,Jan,Salvage,Skinner FF (New),White Sturgeon,489,1
+2019-01-16,2019,Jan,Salvage,Skinner FF (Old),White Sturgeon,540,1
+2019-03-13,2019,Mar,Salvage,Skinner FF (New),White Sturgeon,537,1
+2019-08-15,2019,Aug,Salvage,Tracy FF,White Sturgeon,225,1
+2019-09-01,2019,Sep,Salvage,Tracy FF,White Sturgeon,275,1
+2019-09-02,2019,Sep,Salvage,Tracy FF,White Sturgeon,279,1
+2009-03-03,2009,Mar,Bay Study,429,White Sturgeon,529,1
+2009-03-02,2009,Mar,Bay Study,736,White Sturgeon,510,1
+2009-05-05,2009,May,Bay Study,427,White Sturgeon,547,1
+2009-07-07,2009,Jul,Bay Study,427,White Sturgeon,568,1
+2009-07-29,2009,Jul,Bay Study,761,White Sturgeon,248,1
+2009-10-06,2009,Oct,Bay Study,431,White Sturgeon,1140,1
+2009-11-03,2009,Nov,Bay Study,429,White Sturgeon,620,1
+2009-11-03,2009,Nov,Bay Study,429,White Sturgeon,612,1
+2010-04-14,2010,Apr,Bay Study,853,White Sturgeon,749,1
+2010-05-11,2010,May,Bay Study,429,White Sturgeon,1600,1
+2010-09-07,2010,Sep,Bay Study,751,White Sturgeon,684,1
+2010-10-04,2010,Oct,Bay Study,750,White Sturgeon,194,1
+2010-12-02,2010,Dec,Bay Study,432,White Sturgeon,381,1
+2011-03-09,2011,Mar,Bay Study,321,White Sturgeon,650,1
+2011-05-03,2011,May,Bay Study,433,White Sturgeon,48,1
+2011-06-06,2011,Jun,Bay Study,761,White Sturgeon,44,1
+2011-08-03,2011,Aug,Bay Study,322,White Sturgeon,804,1
+2011-09-06,2011,Sep,Bay Study,736,White Sturgeon,297,1
+2011-09-06,2011,Sep,Bay Study,736,White Sturgeon,245,1
+2011-09-06,2011,Sep,Bay Study,736,White Sturgeon,212,1
+2011-10-31,2011,Oct,Bay Study,736,White Sturgeon,328,1
+2012-01-04,2012,Jan,Bay Study,428,White Sturgeon,794,1
+2012-02-07,2012,Feb,Bay Study,433,White Sturgeon,306,1
+2012-02-06,2012,Feb,Bay Study,751,White Sturgeon,537,1
+2012-02-06,2012,Feb,Bay Study,760,White Sturgeon,1015,1
+2012-04-04,2012,Apr,Bay Study,319,White Sturgeon,870,1
+2012-05-07,2012,May,Bay Study,761,White Sturgeon,43,1
+2009-03-12,2009,Mar,20mm,606,White Sturgeon,530,1
+2011-03-28,2011,Mar,20mm,711,White Sturgeon,12,1
+2011-03-29,2011,Mar,20mm,705,White Sturgeon,13,1
+2011-03-30,2011,Mar,20mm,508,White Sturgeon,12,1
+2011-04-01,2011,Apr,20mm,418,White Sturgeon,14,2
+2011-04-01,2011,Apr,20mm,418,White Sturgeon,13,1
+2011-04-11,2011,Apr,20mm,711,White Sturgeon,15,1
+2011-04-11,2011,Apr,20mm,711,White Sturgeon,13,1
+2014-04-03,2014,Apr,20mm,342,White Sturgeon,760,1
+2016-03-28,2016,Mar,20mm,513,White Sturgeon,15,1
+2016-03-28,2016,Mar,20mm,513,White Sturgeon,14,3
+2016-03-28,2016,Mar,20mm,513,White Sturgeon,14,1
+2016-03-28,2016,Mar,20mm,513,White Sturgeon,15,1
+2016-03-28,2016,Mar,20mm,513,White Sturgeon,14,1
+2016-03-28,2016,Mar,20mm,513,White Sturgeon,13,1
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,14,2
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,13,5
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,12,7
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,14,2
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,12,1
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,14,3
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,13,4
+2016-03-28,2016,Mar,20mm,704,White Sturgeon,12,2
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,14,1
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,13,8
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,12,3
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,11,1
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,15,2
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,14,1
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,13,7
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,12,10
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,11,6
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,10,2
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,13,2
+2016-03-28,2016,Mar,20mm,706,White Sturgeon,12,3
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,13,5
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,12,1
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,11,1
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,13,3
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,12,6
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,11,5
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,10,2
+2016-03-28,2016,Mar,20mm,707,White Sturgeon,12,2
+2016-03-28,2016,Mar,20mm,711,White Sturgeon,12,1
+2016-03-28,2016,Mar,20mm,711,White Sturgeon,10,1
+2016-03-29,2016,Mar,20mm,501,White Sturgeon,14,1
+2016-03-29,2016,Mar,20mm,508,White Sturgeon,14,2
+2016-03-29,2016,Mar,20mm,508,White Sturgeon,13,1
+2016-03-29,2016,Mar,20mm,508,White Sturgeon,15,1
+2016-03-29,2016,Mar,20mm,508,White Sturgeon,14,1
+2016-03-29,2016,Mar,20mm,519,White Sturgeon,14,1
+2016-03-29,2016,Mar,20mm,519,White Sturgeon,14,1
+2016-03-29,2016,Mar,20mm,520,White Sturgeon,14,1
+2016-03-30,2016,Mar,20mm,723,White Sturgeon,15,1
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,13,1
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,12,1
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,12,1
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,11,2
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,10,1
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,12,2
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,11,2
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,10,3
+2016-03-30,2016,Mar,20mm,724,White Sturgeon,9,1
+2016-03-30,2016,Mar,20mm,726,White Sturgeon,12,2
+2016-03-30,2016,Mar,20mm,726,White Sturgeon,12,2
+2016-03-30,2016,Mar,20mm,726,White Sturgeon,11,1
+2016-03-30,2016,Mar,20mm,726,White Sturgeon,10,1
+2017-03-13,2017,Mar,20mm,513,White Sturgeon,13,1
+2017-03-13,2017,Mar,20mm,704,White Sturgeon,12,1
+2017-03-13,2017,Mar,20mm,705,White Sturgeon,13,1
+2017-03-13,2017,Mar,20mm,705,White Sturgeon,13,1
+2017-03-13,2017,Mar,20mm,705,White Sturgeon,12,1
+2017-03-13,2017,Mar,20mm,706,White Sturgeon,12,1
+2017-03-13,2017,Mar,20mm,706,White Sturgeon,15,1
+2017-03-13,2017,Mar,20mm,706,White Sturgeon,13,1
+2017-03-13,2017,Mar,20mm,706,White Sturgeon,13,1
+2017-03-14,2017,Mar,20mm,519,White Sturgeon,13,1
+2017-03-14,2017,Mar,20mm,707,White Sturgeon,13,3
+2017-03-14,2017,Mar,20mm,707,White Sturgeon,12,1
+2017-03-14,2017,Mar,20mm,707,White Sturgeon,11,1
+2017-03-14,2017,Mar,20mm,711,White Sturgeon,12,1
+2017-03-14,2017,Mar,20mm,711,White Sturgeon,12,1
+2017-03-15,2017,Mar,20mm,418,White Sturgeon,14,1
+2017-03-15,2017,Mar,20mm,418,White Sturgeon,13,1
+2017-03-15,2017,Mar,20mm,716,White Sturgeon,12,1
+2017-03-15,2017,Mar,20mm,723,White Sturgeon,14,1
+2017-03-15,2017,Mar,20mm,724,White Sturgeon,12,1
+2017-03-15,2017,Mar,20mm,726,White Sturgeon,12,1
+2017-03-15,2017,Mar,20mm,726,White Sturgeon,11,1
+2017-03-27,2017,Mar,20mm,809,White Sturgeon,14,1
+2017-03-28,2017,Mar,20mm,704,White Sturgeon,13,2
+2017-03-28,2017,Mar,20mm,706,White Sturgeon,13,1
+2017-03-29,2017,Mar,20mm,508,White Sturgeon,14,1
+2017-03-29,2017,Mar,20mm,508,White Sturgeon,13,1
+2017-03-29,2017,Mar,20mm,508,White Sturgeon,12,1
+2017-03-29,2017,Mar,20mm,711,White Sturgeon,12,1
+2017-03-29,2017,Mar,20mm,711,White Sturgeon,12,1
+2017-03-29,2017,Mar,20mm,723,White Sturgeon,13,1
+2017-03-29,2017,Mar,20mm,724,White Sturgeon,12,1
+2017-04-10,2017,Apr,20mm,706,White Sturgeon,13,1
+2017-04-10,2017,Apr,20mm,706,White Sturgeon,11,1
+2017-04-10,2017,Apr,20mm,706,White Sturgeon,19,1
+2017-04-10,2017,Apr,20mm,706,White Sturgeon,12,1
+2017-04-10,2017,Apr,20mm,706,White Sturgeon,11,1
+2017-04-10,2017,Apr,20mm,706,White Sturgeon,13,1
+2017-04-10,2017,Apr,20mm,809,White Sturgeon,13,1
+2017-04-11,2017,Apr,20mm,707,White Sturgeon,12,1
+2017-04-11,2017,Apr,20mm,707,White Sturgeon,13,1
+2017-04-11,2017,Apr,20mm,711,White Sturgeon,12,1
+2017-04-12,2017,Apr,20mm,724,White Sturgeon,10,1
+2017-04-24,2017,Apr,20mm,508,White Sturgeon,14,1
+2017-04-24,2017,Apr,20mm,508,White Sturgeon,12,1
+2017-04-24,2017,Apr,20mm,704,White Sturgeon,14,1
+2017-04-24,2017,Apr,20mm,704,White Sturgeon,13,1
+2017-04-24,2017,Apr,20mm,704,White Sturgeon,12,3
+2017-04-24,2017,Apr,20mm,704,White Sturgeon,12,2
+2017-04-24,2017,Apr,20mm,706,White Sturgeon,14,1
+2017-04-24,2017,Apr,20mm,706,White Sturgeon,13,2
+2017-04-25,2017,Apr,20mm,602,White Sturgeon,14,1
+2017-04-25,2017,Apr,20mm,705,White Sturgeon,14,1
+2017-04-25,2017,Apr,20mm,707,White Sturgeon,13,1
+2017-04-25,2017,Apr,20mm,707,White Sturgeon,13,1
+2017-04-25,2017,Apr,20mm,711,White Sturgeon,13,2
+2017-04-25,2017,Apr,20mm,711,White Sturgeon,12,1
+2017-04-25,2017,Apr,20mm,711,White Sturgeon,10,2
+2017-04-25,2017,Apr,20mm,711,White Sturgeon,12,1
+2017-04-25,2017,Apr,20mm,711,White Sturgeon,12,1
+2017-04-25,2017,Apr,20mm,711,White Sturgeon,11,1
+2017-05-11,2017,May,20mm,726,White Sturgeon,10,1
+2017-05-24,2017,May,20mm,726,White Sturgeon,12,1
+2017-05-24,2017,May,20mm,726,White Sturgeon,11,1
+2018-03-26,2018,Mar,20mm,704,White Sturgeon,13,1
+2018-04-10,2018,Apr,20mm,707,White Sturgeon,14,1
+2018-04-11,2018,Apr,20mm,726,White Sturgeon,20,1
+2018-04-11,2018,Apr,20mm,726,White Sturgeon,14,1
+2018-04-11,2018,Apr,20mm,726,White Sturgeon,13,1
+2018-04-11,2018,Apr,20mm,726,White Sturgeon,12,1
+2019-03-11,2019,Mar,20mm,513,White Sturgeon,13,1
+2019-03-12,2019,Mar,20mm,501,White Sturgeon,13,1
+2019-03-12,2019,Mar,20mm,711,White Sturgeon,12,4
+2019-03-12,2019,Mar,20mm,711,White Sturgeon,11,3
+2019-03-12,2019,Mar,20mm,812,White Sturgeon,14,1
+2019-03-13,2019,Mar,20mm,405,White Sturgeon,13,1
+2019-03-13,2019,Mar,20mm,707,White Sturgeon,12,1
+2019-03-25,2019,Mar,20mm,704,White Sturgeon,13,1
+2019-03-26,2019,Mar,20mm,501,White Sturgeon,16,1
+2019-03-26,2019,Mar,20mm,711,White Sturgeon,15,1
+2019-03-26,2019,Mar,20mm,812,White Sturgeon,13,1
+2019-03-27,2019,Mar,20mm,723,White Sturgeon,13,1
+2019-03-27,2019,Mar,20mm,726,White Sturgeon,14,1
+2019-04-09,2019,Apr,20mm,501,White Sturgeon,14,1
+2019-04-09,2019,Apr,20mm,707,White Sturgeon,13,1
+2019-04-10,2019,Apr,20mm,726,White Sturgeon,11,5
+2019-04-10,2019,Apr,20mm,726,White Sturgeon,12,1
+2019-04-10,2019,Apr,20mm,726,White Sturgeon,10,1
+2019-04-10,2019,Apr,20mm,726,White Sturgeon,12,4
+2019-04-23,2019,Apr,20mm,707,White Sturgeon,12,1
+2019-04-23,2019,Apr,20mm,707,White Sturgeon,11,1
+2019-04-23,2019,Apr,20mm,707,White Sturgeon,11,1
+2009-04-15,2009,Apr,DJFMP,SB018M,White Sturgeon,500,1
+2010-07-09,2010,Jul,DJFMP,SB018M,White Sturgeon,665,1
+2012-12-17,2012,Dec,DJFMP,SB018M,White Sturgeon,800,1
+2016-09-21,2016,Sep,DJFMP,SB018M,White Sturgeon,1945,1
+2017-02-05,2017,Feb,DJFMP,SB018M,White Sturgeon,1560,1
+2009-02-09,2009,Feb,DJFMP,SB018N,White Sturgeon,500,1
+2010-01-06,2010,Jan,DJFMP,SB018N,White Sturgeon,640,1
+2012-04-20,2012,Apr,DJFMP,SB018N,White Sturgeon,321,1
+2012-07-16,2012,Jul,DJFMP,SB018N,White Sturgeon,300,1
+2013-05-10,2013,May,DJFMP,SB018S,White Sturgeon,500,1
+2012-08-01,2012,Aug,Bay Study,751,White Sturgeon,236,1
+2012-09-04,2012,Sep,Bay Study,736,White Sturgeon,251,1
+2012-10-01,2012,Oct,Bay Study,736,White Sturgeon,665,1
+2012-11-05,2012,Nov,Bay Study,432,White Sturgeon,426,1
+2012-11-01,2012,Nov,Bay Study,750,White Sturgeon,529,1
+2012-12-04,2012,Dec,Bay Study,427,White Sturgeon,550,1
+2013-01-08,2013,Jan,Bay Study,431,White Sturgeon,435,1
+2013-01-07,2013,Jan,Bay Study,751,White Sturgeon,574,1
+2013-02-05,2013,Feb,Bay Study,429,White Sturgeon,512,1
+2013-05-06,2013,May,Bay Study,761,White Sturgeon,42,1
+2013-07-02,2013,Jul,Bay Study,431,White Sturgeon,631,1
+2013-08-06,2013,Aug,Bay Study,535,White Sturgeon,561,1
+2013-11-04,2013,Nov,Bay Study,750,White Sturgeon,586,1
+2014-03-03,2014,Mar,Bay Study,750,White Sturgeon,546,1
+2014-06-10,2014,Jun,Bay Study,534,White Sturgeon,674,1
+2014-08-13,2014,Aug,Bay Study,534,White Sturgeon,712,1
+2014-12-02,2014,Dec,Bay Study,534,White Sturgeon,641,1
+2015-05-04,2015,May,Bay Study,750,White Sturgeon,628,1
+2015-09-02,2015,Sep,Bay Study,534,White Sturgeon,583,1
+2015-10-06,2015,Oct,Bay Study,433,White Sturgeon,670,1
+2015-10-05,2015,Oct,Bay Study,750,White Sturgeon,661,1
+2016-05-02,2016,May,Bay Study,736,White Sturgeon,53,1
+2016-05-02,2016,May,Bay Study,750,White Sturgeon,82,1
+2016-06-01,2016,Jun,Bay Study,864,White Sturgeon,30,1
+2016-11-15,2016,Nov,Bay Study,736,White Sturgeon,429,1
+2017-03-21,2017,Mar,Bay Study,751,White Sturgeon,21,1
+2017-03-21,2017,Mar,Bay Study,760,White Sturgeon,26,1
+2017-04-10,2017,Apr,Bay Study,750,White Sturgeon,43,1
+2017-04-10,2017,Apr,Bay Study,853,White Sturgeon,33,1
+2017-05-16,2017,May,Bay Study,433,White Sturgeon,40,1
+2017-05-16,2017,May,Bay Study,535,White Sturgeon,78,1
+2017-05-16,2017,May,Bay Study,535,White Sturgeon,75,1
+2017-05-16,2017,May,Bay Study,535,White Sturgeon,68,1
+2017-05-16,2017,May,Bay Study,535,White Sturgeon,47,1
+2017-05-16,2017,May,Bay Study,535,White Sturgeon,43,1
+2017-05-16,2017,May,Bay Study,535,White Sturgeon,39,1
+2017-05-15,2017,May,Bay Study,736,White Sturgeon,88,1
+2017-05-15,2017,May,Bay Study,736,White Sturgeon,72,1
+2017-05-15,2017,May,Bay Study,736,White Sturgeon,66,1
+2017-05-15,2017,May,Bay Study,736,White Sturgeon,63,1
+2017-05-15,2017,May,Bay Study,736,White Sturgeon,53,1
+2017-05-15,2017,May,Bay Study,736,White Sturgeon,33,1
+2017-06-15,2017,Jun,Bay Study,535,White Sturgeon,151,1
+2017-06-15,2017,Jun,Bay Study,535,White Sturgeon,133,1
+2017-09-13,2017,Sep,Bay Study,736,White Sturgeon,286,1
+2017-11-09,2017,Nov,Bay Study,323,White Sturgeon,1194,1
+2018-06-13,2018,Jun,Bay Study,431,White Sturgeon,402,1
+2018-07-10,2018,Jul,Bay Study,433,White Sturgeon,790,1
+2018-08-28,2018,Aug,Bay Study,750,White Sturgeon,429,1
+2018-09-27,2018,Sep,Bay Study,736,White Sturgeon,514,1
+2019-06-11,2019,Jun,Bay Study,433,White Sturgeon,124,1
+2019-07-15,2019,Jul,Bay Study,736,White Sturgeon,133,1
+2019-07-15,2019,Jul,Bay Study,736,White Sturgeon,120,1
+2019-08-05,2019,Aug,Bay Study,736,White Sturgeon,238,1
+2019-08-05,2019,Aug,Bay Study,736,White Sturgeon,199,1
+2019-09-12,2019,Sep,Bay Study,215,White Sturgeon,1447,1
+2020-06-11,2020,Jun,Bay Study,431,White Sturgeon,399,1
+2020-08-17,2020,Aug,Bay Study,431,White Sturgeon,701,1
+2017-05-11,2017,May,EDSM,LSR203,White Sturgeon,NA,1
+2017-04-25,2017,Apr,EDSM,SBM203,White Sturgeon,13.5,1
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,12.399999618530273,1
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,19.100000381469727,1.1428571939468384
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,13.5,1.1428571939468384
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,12.300000190734863,1.1428571939468384
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,12,1.1428571939468384
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,11.5,1.1428571939468384
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,10.699999809265137,1.1428571939468384
+2017-04-27,2017,Apr,EDSM,SRU203,White Sturgeon,9.800000190734863,1.1428571939468384
+2009-11-03,2009,Nov,FMWT,339,White Sturgeon,720,1
+2012-12-06,2012,Dec,FMWT,414,White Sturgeon,474,1
+2019-09-09,2019,Sep,FMWT,512,White Sturgeon,240,1
+2017-09-11,2017,Sep,FMWT,603,White Sturgeon,454,1
+2019-09-09,2019,Sep,FMWT,608,White Sturgeon,250,1
+2009-12-10,2009,Dec,FMWT,706,White Sturgeon,610,1
+2009-12-10,2009,Dec,FMWT,707,White Sturgeon,540,1
+2009-04-16,2009,Apr,SKT,602,White Sturgeon,490,1
+2019-01-23,2019,Jan,SKT,519,White Sturgeon,450,1
+2021-04-29,2021,Apr,SKT,602,White Sturgeon,540,1
+2017-02-28,2017,Feb,SLS,705,White Sturgeon,13,2
+2019-03-12,2019,Mar,SLS,711,White Sturgeon,12,2
+2019-03-12,2019,Mar,SLS,711,White Sturgeon,11,2
+2019-03-13,2019,Mar,SLS,520,White Sturgeon,13,1
+2019-03-14,2019,Mar,SLS,801,White Sturgeon,14,1
+2016-05-04,2016,May,Suisun,NS1,White Sturgeon,565,1
+2009-04-23,2009,Apr,Suisun,NS3,White Sturgeon,500,1
+2011-08-25,2011,Aug,Suisun,SU1,White Sturgeon,235,1
+2014-06-11,2014,Jun,Suisun,SU1,White Sturgeon,495,1
+2017-12-04,2017,Dec,Suisun,SU1,White Sturgeon,321,1
+2018-03-05,2018,Mar,Suisun,SU1,White Sturgeon,344,1
+2018-05-14,2018,May,Suisun,SU1,White Sturgeon,370,1
+2011-08-25,2011,Aug,Suisun,SU2,White Sturgeon,208,1
+2012-01-27,2012,Jan,Suisun,SU2,White Sturgeon,347,1
+2012-03-14,2012,Mar,Suisun,SU2,White Sturgeon,302,1
+2012-04-24,2012,Apr,Suisun,SU2,White Sturgeon,335,1
+2012-04-24,2012,Apr,Suisun,SU2,White Sturgeon,300,1
+2014-09-23,2014,Sep,Suisun,SU2,White Sturgeon,1050,1
+2015-10-13,2015,Oct,Suisun,SU2,White Sturgeon,1700,1
+2018-02-06,2018,Feb,Suisun,SU2,White Sturgeon,360,1
+2018-06-12,2018,Jun,Suisun,SU2,White Sturgeon,425,1
+2021-03-16,2021,Mar,Suisun,SU2,White Sturgeon,470,1
+2021-05-17,2021,May,Suisun,SU2,White Sturgeon,481,1
+2017-10-19,2017,Oct,Suisun,SU3,White Sturgeon,298,1
+2020-06-24,2020,Jun,Suisun,SU3,White Sturgeon,1575,1
+2011-08-24,2011,Aug,Suisun,SU4,White Sturgeon,222,1
+2012-05-22,2012,May,Suisun,SU4,White Sturgeon,60,1
+2014-11-12,2014,Nov,Suisun,SU4,White Sturgeon,1030,1
+2017-11-08,2017,Nov,Suisun,SU4,White Sturgeon,300,1
+2018-01-11,2018,Jan,Suisun,SUVOL,White Sturgeon,301,1
