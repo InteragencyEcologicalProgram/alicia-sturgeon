@@ -130,7 +130,7 @@ df_WS <- df_WS %>%
   relocate(Count, .after = Length)
 
 # Write out CSV of data for Alicia
-write_csv(df_WS, file = "white-sturgeon-since-2009.csv")
+write_csv(df_WS, file = here("output","white-sturgeon-since-2009.csv"))
 
 ```
 
